@@ -13,7 +13,7 @@ var types = ['Unknown', 'Point', 'LineString', 'Polygon'];
  * @returns {Function} filter-evaluating function
  */
 function createFilter(filter) {
-    return new Function('f', 'var p = (f && f.properties || {}); return ' + compile(filter));
+    return new Function('f', 'var p = (f && f.properties || f.tags || {}); return ' + compile(filter));
 }
 
 function compile(filter) {
