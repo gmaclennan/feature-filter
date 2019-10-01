@@ -45,7 +45,7 @@ var testFilter = ff(filter);
 var feature = {
     type: 2,
     properties: {
-       class: "street_limited"
+       class: "street_limited",
        admin_level: 1
     }
 };
